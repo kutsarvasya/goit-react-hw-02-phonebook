@@ -1,19 +1,20 @@
 // import { Item, List } from './Contacts.styled';
 import PropTypes from 'prop-types';
+import { Item, List } from './Contacts.styled';
 
 export function Contacts({ contacts, deleteContact }) {
   return (
     <>
-      <ul>
+      <List>
         {contacts.map(contact => (
-          <li key={contact.id}>
+          <Item key={contact.id}>
             <p>
               {contact.name}: {contact.number}
             </p>
             <button onClick={() => deleteContact(contact.id)}>Удалить</button>
-          </li>
+          </Item>
         ))}
-      </ul>
+      </List>
     </>
   );
 }
