@@ -2,7 +2,7 @@ import { Contacts } from 'components/Contacts/Contacts';
 import { Filter } from 'components/Filter/Filter';
 import { Form } from 'components/Form/Forrm';
 import { Component } from 'react';
-import { Div } from './App.styled';
+// import { Div } from './App.styled';
 
 const initialPhoneBook = [
   { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
@@ -48,7 +48,7 @@ export class App extends Component {
   render() {
     const visibleContacts = this.getVisibleContacts();
     return (
-      <Div>
+      <div>
         <h1>Phonebook</h1>
         <Form addContacts={this.addContacts} />
         <h2>Contacts</h2>
@@ -57,7 +57,7 @@ export class App extends Component {
           contacts={visibleContacts}
           deleteContact={this.deleteContacts}
         />
-      </Div>
+      </div>
     );
   }
 }
